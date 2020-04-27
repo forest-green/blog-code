@@ -1,27 +1,9 @@
 import React, { Component } from 'react';
-// import logo from './logo.svg';
 import './App.css';
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
+/**
+ * 此处app作为父级组件，也可以称之为根路由
+ * 这样的写法配合Router.js文件中的render写法，类似于Vue中的Router-view所起到的作用
+ * */ 
 class App extends Component{
   render() {
     return <div>{this.props.children}</div>
