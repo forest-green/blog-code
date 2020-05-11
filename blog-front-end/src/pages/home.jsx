@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 // import { Link } from 'react-router-dom';
 // import { Layout } from 'antd';
-import './home.sass'
+import './home.less'
 
 // const { Content } = Layout
 /**
