@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 // import { Link } from 'react-router-dom';
-// import { Layout } from 'antd';
+import { Layout, Menu, Row, Col } from 'antd';
+import ArticleHome from './article'
 import './home.less'
 
-// const { Content } = Layout
+const { Header, Footer, Content } = Layout;
 /**
  * 首页增加水波动画效果
  * 初始展示网站的局部，以圆形区域为主，主要类似于局部展示的意思
@@ -21,16 +22,27 @@ class Home extends Component {
 
   render() {
     return (
-      <div className="container">
-        <div className="clipWrap">
-
-        </div>
-        {/* <Layout>
-          <Content>
-
-          </Content>
-        </Layout> */}
-      </div>
+      <Layout className="layout">
+        <Header className="header">
+          <Row justify="space-between">
+            <Col span={4}>
+              <div className="logo" />
+            </Col>
+            <Col offset={4} span={4}>
+              <Menu theme="light"  mode="horizontal" defaultSelectedKeys={['2']}>
+                <Menu.Item key="1">nav 1</Menu.Item>
+                <Menu.Item key="2">nav 2</Menu.Item>
+                <Menu.Item key="3">nav 3</Menu.Item>
+              </Menu>
+            </Col>
+          </Row>
+        </Header>
+        <Content className="content">
+          <ArticleHome />
+          {/* {this.props.children} */}
+        </Content>
+        <Footer className="footer">Footer</Footer>
+      </Layout>
     )
   }
 }
